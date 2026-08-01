@@ -1,29 +1,56 @@
-# Welcome to your Lovable project
 
-This project was built with [Lovable](https://lovable.dev).
+Website for **Khawaja Hospital Eye Care & Eyewear**, led by Dr. Muhammad Asmat Rasheed (Lecturer, The University of Lahore) — Main Feroz Pur Road, Kahna Nau, Lahore.
 
-## Build with Lovable
+Built with TanStack Start (React 19), Tailwind CSS 4, and shadcn/ui components. Originally scaffolded via Lovable.
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## Tech Stack
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Framework:** TanStack Start + TanStack Router (file-based routing)
+- **UI:** React 19, Tailwind CSS 4, shadcn/ui (Radix primitives)
+- **Forms:** React Hook Form + Zod
+- **Build:** Vite 8, Nitro
+- **Package manager:** Bun
 
-## Development
+## Project Structure
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+```
+src/
+├── routes/          # File-based routes (index, book, location, tour, treatments)
+├── components/       # Header, Footer, WhatsAppButton, site.tsx, ui/ (shadcn)
+├── lib/
+│   ├── clinic.ts     # Clinic info: name, doctor, phone, address, WhatsApp link
+│   └── utils.ts
+├── hooks/
+├── router.tsx
+├── server.ts
+└── start.ts
+public/
+└── images/           # doctor, hero, location, treatments, tour
 ```
 
-## Built with
+## Pages
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+- **Home (`/`)** — Hero, services overview, testimonials
+- **Book (`/book`)** — Consultation booking via WhatsApp
+- **Location (`/location`)** — Address, map, directions
+- **Treatments (`/treatments`)** — Services offered
+- **Tour (`/tour`)** — Facility/hospital tour
+
+## Getting Started
+
+```bash
+bun install
+bun dev        # start dev server
+bun run build  # production build
+bun run preview
+```
+
+## Key Config
+
+Clinic details (name, doctor, phone, address, hours, WhatsApp number) are centralized in `src/lib/clinic.ts` — update here to change contact info sitewide.
+
+WhatsApp is the primary booking channel (`WhatsAppButton.tsx`, floating action button on all pages).
+
+## Deployment
+
+Deployed via Cloudflare Workers (webstudio880 stack) — see `wrangler.jsonc` for config.
