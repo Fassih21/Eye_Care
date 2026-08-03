@@ -1,7 +1,7 @@
 
 Website for **Khawaja Hospital Eye Care & Eyewear**, led by Dr. Muhammad Asmat Rasheed (Lecturer, The University of Lahore) — Main Feroz Pur Road, Kahna Nau, Lahore.
 
-Built with TanStack Start (React 19), Tailwind CSS 4, and shadcn/ui components. Originally scaffolded via Lovable.
+Built with TanStack Start (React 19), Tailwind CSS 4, and shadcn/ui components.
 
 ## Tech Stack
 
